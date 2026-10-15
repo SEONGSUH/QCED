@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compass-gradient"
+version = "0.2.0"
+description = "8-directional compass gradient edge detection via the circulant-matrix / Fourier-transform interpretation of Park & Choi (1989)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+keywords = [
+    "edge-detection",
+    "image-processing",
+    "sobel",
+    "prewitt",
+    "kirsch",
+    "compass-gradient",
+    "circulant-matrix",
+    "fourier-transform",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+quantum = ["pennylane>=0.35"]
+
+[project.urls]
+Homepage = "https://github.com/yourname/compass-gradient"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
